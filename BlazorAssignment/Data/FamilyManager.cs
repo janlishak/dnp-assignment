@@ -12,17 +12,18 @@ namespace BlazorAssignment.Data
     public class FamilyManager : IFamilyManager
     {
         private readonly FileContext familyFileHandler;
+        private IList<Adult> adults;
        
         public FamilyManager()
         {
             familyFileHandler = new FileContext();
+            adults = familyFileHandler.Adults;
         }
        
         
         public bool AddAdultToFamily(Adult adultToAdd)//, Family familyToJoin)
         {
             //IList<Family> families = familyFileHandler.Families;
-            IList<Adult> adults = familyFileHandler.Adults;
             Family family;
 
             //try
@@ -55,14 +56,11 @@ namespace BlazorAssignment.Data
 
         public IList<Adult> GetAdults()
         {
-           
-            IList<Adult> adults = familyFileHandler.Adults;
             return adults;
         }
 
         public void RemoveAdult(Adult adult)
         {
-            IList<Adult> adults = familyFileHandler.Adults;
             
                 if (adults.Contains(adult))
                 {
@@ -74,7 +72,6 @@ namespace BlazorAssignment.Data
 
         private IList<Adult> CollectAdults(IList<Family> families)
         {
-            IList<Adult> adults = new List<Adult>();
             foreach (var family in families)
             {
                 foreach (var adult in family.Adults)
