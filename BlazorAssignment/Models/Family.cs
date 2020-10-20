@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 namespace BlazorAssignment.Models
 {
-   
-        public class Family
+
+    public class Family
         {
 
             //public int Id { get; set; }

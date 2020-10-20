@@ -3,15 +3,7 @@
 @inject NavigationManager NavigationManager
 @attribute [Authorize(Policy = "SecurityLevel3")]
 
-
-
-
-<h3>AddAdult</h3>
-
-@code {
-
-}
-
+<h3>Add Adults</h3>
 
 <EditForm Model="@newAdultItem" OnValidSubmit="@AddNewAdult">
     <DataAnnotationsValidator />
