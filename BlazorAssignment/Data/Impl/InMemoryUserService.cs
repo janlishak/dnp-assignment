@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace BlazorAssignment.Data.Impl
 {
@@ -22,8 +21,8 @@ namespace BlazorAssignment.Data.Impl
                 },
                 new User
                 {
-                    UserName = "Lucia",
-                    Password="pass",
+                    UserName = "Jan",
+                    Password="123456",
                     SecurityLevel= 1
                 }
             }.ToList();

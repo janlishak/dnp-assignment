@@ -1,17 +1,5 @@
 [
   {
-    "JobTitle": "Human Resources Director",
-    "Id": 19,
-    "FirstName": "Izayah",
-    "LastName": "Fischer",
-    "HairColor": "Black",
-    "EyeColor": "Brown",
-    "Age": 45,
-    "Weight": 102.5,
-    "Height": 178,
-    "Sex": "M"
-  },
-  {
     "JobTitle": "Superintendent",
     "Id": 20,
     "FirstName": "Siddharth",

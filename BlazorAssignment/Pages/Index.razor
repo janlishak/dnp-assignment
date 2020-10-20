@@ -1,7 +1,16 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<h1>DNP Assignment 1</h1>
 
-Welcome to your new app.
+<AuthorizeView>
+    <NotAuthorized>
+        <p>
+            Login to access all the functionalities of the app<br><br>
+            Default login level 1 (Username: Jan, Password: 123456)<br>
+            With this user you can only view adults<br><br>
+            Default login level 2 (Username: Lenka, Password: passwrod)<br>
+            With this user you can view, add and delete adults.
+        </p>
+    </NotAuthorized>
+</AuthorizeView>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
