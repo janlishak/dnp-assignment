@@ -15,13 +15,13 @@ namespace BlazorAssignment.Data.Impl
                 {
                 new User
                 {
-                    UserName = "Lenka",
-                    Password="password",
+                    UserName = "admin",
+                    Password="123456",
                     SecurityLevel = 3
                 },
                 new User
                 {
-                    UserName = "Jan",
+                    UserName = "user",
                     Password="123456",
                     SecurityLevel= 1
                 }
