@@ -1,0 +1,66 @@
+﻿@page "/addAdult"
+@inject Ass1.Data.IFamilyManager FamiliesManager
+@inject NavigationManager NavigationManager
+@attribute [Authorize(Policy = "SecurityLevel3")]
+
+
+
+
+<h3>AddAdult</h3>
+
+@code {
+
+}
+
+
+<EditForm Model="@newAdultItem" OnValidSubmit="@AddNewAdultAsync">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div cass="form-group">
+        First Name: <br />
+        <InputText class="form-control" rows="4" @bind-Value="newAdultItem.FirstName" />
+    </div>
+    <div cass="form-group">
+        Last Name: <br />
+        <InputText class="form-control" rows="4" @bind-Value="newAdultItem.LastName" />
+    </div>
+    <div cass="form-group">
+        Hair Color: <br />
+        <InputText class="form-control" rows="4" @bind-Value="newAdultItem.HairColor" />
+    </div>
+    <div cass="form-group">
+        Eye Color: <br />
+        <InputText class="form-control" rows="4" @bind-Value="newAdultItem.EyeColor" />
+    </div>
+    <div cass="form-group">
+        Age: <br />
+        <InputNumber rows="4" @bind-Value="newAdultItem.Age" />
+    </div>
+    <div cass="form-group">
+        Weight: <br />
+        <InputNumber rows="4" @bind-Value="newAdultItem.Weight" />
+    </div>
+    <div cass="form-group">
+        Height: <br />
+        <InputNumber rows="4" @bind-Value="newAdultItem.Height" />
+    </div>
+    <div cass="form-group">
+        Sex: <br />
+        <InputText class="form-control" rows="4" @bind-Value="newAdultItem.Sex" />
+    </div>
+    <p class="actions">
+        <button class="btn btn-outline-dark" type="submit"> Create </button>
+    </p>
+</EditForm>
+
+
+@code {
+    private Ass1.Models.Adult newAdultItem = new Ass1.Models.Adult();
+    private void AddNewAdultAsync()
+    {
+        FamiliesManager.AddAdultToFamilyAsync(newAdultItem);
+        NavigationManager.NavigateTo("/adults");
+    }
+}
+
