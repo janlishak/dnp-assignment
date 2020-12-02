@@ -1,1 +1,0 @@
-## Blazor assignment (version 1)
